@@ -2,10 +2,15 @@
 
 document.getElementById("home").addEventListener("click", toggleDisplay)
 document.getElementById("about").addEventListener("click", toggleDisplay)
-document.getElementById("portolio").addEventListener("click", toggleDisplay)
+document.getElementById("portfolio").addEventListener("click", toggleDisplay)
 document.getElementById("contact").addEventListener("click", toggleDisplay)
 
 function toggleDisplay(event) {
+    document.querySelectorAll(".tab").forEach((tab) =>{
+        tab.style.display = "none"
+        if (tab.classList.contains(event.target.id) === true)
+            tab.style.display ="block"
 
+    })
 
 }
